@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "next build && npx next export",
+    "start": "npx serve out",
     "next-dev": "next dev",
-    "dev": "nodemon --exec \"npx tsx server.ts\" --watch server.ts --watch src --ext ts,tsx,js,jsx",
-    "start": "NODE_ENV=production npx tsx server.ts",
+    "dev": "nodemon --watch prisma --exec tsx watch",
     "lint": "next lint",
     "db:push": "prisma db push",
     "db:generate": "prisma generate",
